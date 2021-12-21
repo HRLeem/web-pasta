@@ -3,22 +3,115 @@
 <head>
 <title>WEB-WELCOME</title>
 <meta charset="utf-8">
+<script>
+var Link = {
+  setColor : function (color){
+    var bbb = document.querySelectorAll('a');
+    var i = 0;
+    while(i < bbb.length){
+      bbb[i].style.color = color;
+      i = i+1;
+  }
+}
+}
+
+
+  var Body = {
+    setColor: function (color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor: function(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+  }
+
+
+
+function nightDayButton(self) {
+
+var aaa = document.querySelector('body');
+var bbb = document.querySelectorAll('a');
+var i = 0;
+if(self.value === 'night'){
+  Body.setBackgroundColor('black');
+  Body.setColor('white');
+  self.value = 'day';
+
+  Link.setColor('powderblue');
+
+}
+else{
+  Body.setBackgroundColor('white');
+  Body.setColor('black');
+  self.value = 'night';
+
+  Link.setColor('blue');
+}
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
-<body>
+<body >
   <h1> <a href="index.html">ITALY PASTA </a></h1>
+
+<!--
+Onclick 이벤트의 적용범위가 자기자신이라 'This'를 쓸 수 있다.
+-->
+<input type="button" value="night" onclick="
+  nightDayButton(this);
+"
+>
+
+
+
+
+  <div id="grid">
+
 <ol>
-  <li><a href="1.html"> CARBONARA</a></li>
-  <li><a href="2.html">  VONGOLE</a></li>
+  <li><a href="1.html" > CARBONARA</a></li>
+  <li><a href="2.html" >  VONGOLE</a></li>
   <li><a href="3.html"> POMODORO</a></li>
+
 </ol>
 
-<h2><a href="https://dict.naver.com/search.nhn?dicQuery=%ED%8C%8C%EC%8A%A4%ED%83%80&query=%ED%8C%8C%EC%8A%A4%ED%83%80&target=dic&query_utf=&isOnlyViewEE="
+    <div id="article">
+
+    <h2><a href="https://namu.wiki/w/%ED%8C%8C%EC%8A%A4%ED%83%80"
    target="_blank" title="definition of pasta">PASTA</a></h2>
-<br><strong>파스타는<u>짱</u> 맛있다.</strong>
+
+<p>
+    <br><strong>파스타는<u>짱</u> 맛있다.</strong>
+    <br>
+    <p>현재는 한국에서 서양 요리의 대표격으로 자리잡았으며 상당히 보편화되었지만, 의외로 과거 유럽 요리계에서는 상대적으로 비주류인 면(麵) 요리였다.
+    <br> 이탈리아식 파스타 외에 동유럽 지역에서는 대개 파스타의 영향을 받거나 유라시아 지역에서 유래한 면요리가 소수 있다.
+    <br> 대표적인 것이 독일의 슈페츨레(Spätzle).
+    <br>그러나 전통적으로 물이 귀하다 보니 면보다는 빵으로 만들어 먹는 것이 보편적이었다.</p>
+
+
+<br>
+특히 '파스타=스파게티=길다란 면'이라는 인식이 있어 유럽의 국수를 대표하고 있을 정도이나, 실제로는 얇게 편 밀가루 반죽을 적절히 잘라 놓으면 모두 파스타라고 부르고 있다.
+<br> 동양인들의 시각에서는 만두에 가까운 '라비올리'나 수제비에 가까운 '뇨키'도 파스타, 양념된 만두피로 보이는 '라자냐'도 파스타로 분류된다.
+<br> 다만 한식에서 수제비의 포지션이 칼국수의 바리에이션으로 취급되는 경향이 있어서 뇨키가 파스타에 포함되는 것은 한국인 입장에서 그나마 자연스럽다.
+<br>
+
+이렇듯 형태가 다양하지만 크게 롱 파스타(스파게티, 카펠리니, 링귀니, 페투치네 등)와 숏 파스타(파르팔레, 푸실리, 마카로니, 펜네 등) 그리고 스터프 파스타(주로 라자냐, 라비올리, 아뇰로티 등)[1] 분류까지 3가지로 나눌 수 있다.
+<br>
+
+이탈리아 내에서 사용하는 소스 종류만 해도 엄청나게 많으며, 외국에서 번안된 소스까지 포함시키면 헤아릴 수 없을 정도다.
+<br>이탈리아에 거주하는 어떤 한국인 블로그에는 현지인들이 실제로 먹는 방식의 수많은 레시피가 수록되어 있는데 해당 블로그의 첫 번째 요리 카테고리를 참조하면 된다.
+<br> 게다가 소스를 뿌리는 방식이 아니고 재료와 혼합하는 방식으로 만드는 방식도 많으며, 국내만 해도 올리브유, 칠리, 두반장 등등이 이용되고 있다.
+<br> 녹말을 기본으로 하는 재료이기 때문에 웬만한 재료와 궁합이 잘 맞는 편이다. 녹말이 주성분인 빵이나 밥이 웬만한 재료와 함께 먹어도 대부분 먹을 만한 것과 같다.
+<br> 자세히 알아보고 싶다면 이탈리아 요리 파스타 부분을 참고해 보자.
 <br>
 <img src="pasta1.jpg" width="300">
+</div>
 
+    </div>
+
+</div>
 
 </body>
 </html>
